@@ -24,7 +24,9 @@
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
-        <router-view></router-view>
+        <div class="container">
+            <router-view></router-view>
+        </div>
     </div>
 </template>
 <!-- Latest compiled and minified CSS -->
@@ -33,8 +35,8 @@
     export default{
         data(){
             return{
-                register:'Register',
-                userlist:'Userlist'
+                register:'Add Product',
+                userlist:'Product List'
             }
         }
     }
