@@ -19,18 +19,18 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 import App from './components/App.vue';
-import Home from './components/Home.vue';
-import UserList from './components/UserList.vue';
+import Product from './components/AddProduct.vue';
+import ProductList from './components/ProductList.vue';
 
 const router = new VueRouter({
     routes:[
        {
-           path: '/home',
-           component: Home
+           path: '/addProduct',
+           component: Product
        },
        {
-           path: '/userlist',
-           component: UserList
+           path: '/productlist',
+           component: ProductList
        }
     ]
 });

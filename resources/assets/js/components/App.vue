@@ -18,8 +18,8 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><router-link to='/home'>{{ register }}</router-link></li>
-                        <li><router-link to='/userlist'>{{ userlist }}</router-link></li>
+                        <li><router-link to='/addProduct'>{{ register }}</router-link></li>
+                        <li><router-link to='/productlist'>{{ userlist }}</router-link></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
