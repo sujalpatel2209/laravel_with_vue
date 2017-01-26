@@ -18,6 +18,8 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
+Vue.http.options.root = 'http://localhost:8000/';
+
 import App from './components/App.vue';
 import Product from './components/AddProduct.vue';
 import ProductList from './components/ProductList.vue';

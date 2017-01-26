@@ -16,7 +16,7 @@
     export default{
         data(){
             return{
-                msg:'Registration'
+                msg:'Add Product'
             }
         }
     }
