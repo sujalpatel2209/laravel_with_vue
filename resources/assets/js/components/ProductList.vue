@@ -9,7 +9,6 @@
             </tr>
             </thead>
             <tbody>
-
             <tr v-for='product in products'>
                 <td>{{ product.name }}</td>
                 <td>{{ product.price }}</td>
@@ -23,7 +22,8 @@
     export default{
         data(){
             return{
-                products: []
+                products: [],
+                count : 0
             }
         },
         created() {

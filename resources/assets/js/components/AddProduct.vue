@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-        <form class="form-signin">
+        <form class="form-signin" v-on:submit.prevent="addProduct()">
             <h2 class="form-signin-heading text-center">{{ msg }}</h2>
             <input type="text" class="form-control" name="name" placeholder="Product Name" required=""
                    autofocus=""/><br>
@@ -18,6 +18,12 @@
             return{
                 msg:'Add Product'
             }
+        },
+        methods:{
+            addProduct(){
+                console.log("Add Record");
+            }
         }
     }
+
 </script>

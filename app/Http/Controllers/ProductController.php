@@ -11,4 +11,13 @@ class ProductController extends Controller
     {
         return Product::all();
     }
+
+    public function add(Request $request)
+    {
+        $product = new Product();
+        $product->name = $request->name;
+        $product->price = $request->price;
+        $product->description = $request->description;
+        $product->save();
+    }
 }
