@@ -12,7 +12,7 @@ class ProductController extends Controller
         return Product::all();
     }
 
-    public function add(Request $request)
+    public function store(Request $request)
     {
         $product = new Product();
         $product->name = $request->name;
