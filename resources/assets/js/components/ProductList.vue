@@ -6,6 +6,7 @@
                 <th>Name</th>
                 <th>Price</th>
                 <th>Description</th>
+                <th colspan="2" style="text-align:center">Action</th>
             </tr>
             </thead>
             <tbody>
@@ -13,6 +14,8 @@
                 <td>{{ product.name }}</td>
                 <td>{{ product.price }}</td>
                 <td>{{ product.description }}</td>
+                <td style="text-align:center"><a href="#"><button class='btn btn-danger'>Delete</button></a></td>
+                <td style="text-align:center"><a href="#"><button class='btn btn-primary'>Update</button></a></td>
             </tr>
             </tbody>
         </table>
