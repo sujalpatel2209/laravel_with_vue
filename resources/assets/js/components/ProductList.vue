@@ -3,6 +3,7 @@
         <table class="table table-bordered">
             <thead>
             <tr>
+                <th>ID</th>
                 <th>Name</th>
                 <th>Price</th>
                 <th>Description</th>
@@ -11,11 +12,12 @@
             </thead>
             <tbody>
             <tr v-for='product in products'>
+                <td>{{ product.id }}</td>
                 <td>{{ product.name }}</td>
                 <td>{{ product.price }}</td>
                 <td>{{ product.description }}</td>
-                <td style="text-align:center"><a @click = "deleteProduct()" href="#"><button class='btn btn-danger'>Delete</button></a></td>
-                <td style="text-align:center"><a href="#"><button class='btn btn-primary'>Update</button></a></td>
+                <td style="text-align:center"><button @click="deleteProduct(14)" class='btn btn-danger'>Delete</button></td>
+                <td style="text-align:center"><button class='btn btn-primary'>Update</button></td>
             </tr>
             </tbody>
         </table>
@@ -36,8 +38,11 @@
                 })
         },
         methods:{
-            deleteProduct(){
-                this.$http.get('/api/products/')
+            deleteProduct(id){
+                this.$http.get('/api/products/'+id)
+                    .then(function(result){
+                        console.log(result);
+                    })
             }
         }
     }
