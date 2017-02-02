@@ -20,4 +20,9 @@ class ProductController extends Controller
         $product->description = $request->description;
         $product->save();
     }
+
+    public function delete($id)
+    {
+        Product::destroy($id);
+    }
 }

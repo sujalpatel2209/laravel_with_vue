@@ -14,7 +14,7 @@
                 <td>{{ product.name }}</td>
                 <td>{{ product.price }}</td>
                 <td>{{ product.description }}</td>
-                <td style="text-align:center"><a href="#"><button class='btn btn-danger'>Delete</button></a></td>
+                <td style="text-align:center"><a @click = "deleteProduct()" href="#"><button class='btn btn-danger'>Delete</button></a></td>
                 <td style="text-align:center"><a href="#"><button class='btn btn-primary'>Update</button></a></td>
             </tr>
             </tbody>
@@ -34,6 +34,11 @@
                 .then(response => {
                     this.products = response.body
                 })
+        },
+        methods:{
+            deleteProduct(){
+                this.$http.get('/api/products/')
+            }
         }
     }
 
