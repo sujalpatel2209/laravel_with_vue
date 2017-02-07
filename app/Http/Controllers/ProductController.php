@@ -21,7 +21,7 @@ class ProductController extends Controller
         $product->save();
     }
 
-    public function delete($id)
+    public function destroy($id)
     {
         Product::destroy($id);
     }

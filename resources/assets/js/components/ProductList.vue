@@ -16,7 +16,7 @@
                 <td>{{ product.name }}</td>
                 <td>{{ product.price }}</td>
                 <td>{{ product.description }}</td>
-                <td style="text-align:center"><button @click="deleteProduct(14)" class='btn btn-danger'>Delete</button></td>
+                <td style="text-align:center"><button @click="deleteProduct( product.id )" class='btn btn-danger'>Delete</button></td>
                 <td style="text-align:center"><button class='btn btn-primary'>Update</button></td>
             </tr>
             </tbody>
@@ -39,9 +39,10 @@
         },
         methods:{
             deleteProduct(id){
-                this.$http.get('/api/products/'+id)
+                this.$http.delete('/api/products/'+id)
                     .then(function(result){
                         console.log(result);
+                        console.log("Delete Successfully");
                     })
             }
         }
