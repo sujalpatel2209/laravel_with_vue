@@ -25,4 +25,9 @@ class ProductController extends Controller
     {
         Product::destroy($id);
     }
+
+    public function show($id)
+    {
+        return Product::where('id',$id)->get();
+    }
 }
