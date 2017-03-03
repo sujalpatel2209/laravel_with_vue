@@ -19,3 +19,4 @@ Route::get('/user', function (Request $request) {
 
 Route::resource('products','ProductController');
 
+Route::post('products/updateRecord','ProductController@updateRecord');

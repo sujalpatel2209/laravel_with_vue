@@ -37,6 +37,8 @@ const router = new VueRouter({
     ]
 });
 
+/* Set Default First Component */
+
 const app = new Vue({
     el: '#app',
     render: h => h(App), // First Component Name

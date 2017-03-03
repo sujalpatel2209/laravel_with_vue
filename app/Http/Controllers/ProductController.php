@@ -30,4 +30,15 @@ class ProductController extends Controller
     {
         return Product::where('id',$id)->get();
     }
+
+    public function updateRecord(Request $request){
+
+        $data = array(
+            "name" => $request->name,
+            "price" => $request->price,
+            "description" => $request->desc
+        );
+        Product::where('id',$request->id)->update($data);
+    }
+
 }
