@@ -20,7 +20,7 @@
                     <button @click="deleteProduct(product.id)" class='btn btn-danger'>Delete</button>
                 </td>
                 <td style="text-align:center">
-                    <button @click="getSingleRecord(product.id)" class='btn btn-primary' data-toggle="modal" data-target="#myModal">Update</button>
+                    <button @click="getSingleRecord(product.id)" class='btn btn-primary'>Update</button>
                 </td>
             </tr>
             </tbody>
@@ -96,6 +96,7 @@
                         this.singleproduct.name = response.body[0].name;
                         this.singleproduct.price = response.body[0].price;
                         this.singleproduct.desc = response.body[0].description;
+                        $('#myModal').modal('show');
                     })
             },
             updateProduct(){
@@ -104,7 +105,7 @@
                         console.log(result);
                         $('#myModal').modal('hide');
                         $('#myDelete').modal('hide');
-                        //this.products.push = this.fetchAllRecord();
+                        this.products.push = this.fetchAllRecord();
                     })
             }
         }
