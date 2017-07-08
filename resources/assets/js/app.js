@@ -39,6 +39,10 @@ const router = new VueRouter({
 
 /* Set Default First Component */
 
+Vue.component('test_comp',{
+    template:'<h1>Test Component</h1>'
+});
+
 const app = new Vue({
     el: '#app',
     render: h => h(App), // First Component Name

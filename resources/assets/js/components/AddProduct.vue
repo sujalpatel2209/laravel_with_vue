@@ -25,8 +25,9 @@
                 <td>{{ product.description }}</td>
             </tr>
             </tbody>
-        </table>
-    </div>-->
+        </table>-->
+        <!--<test_comp></test_comp>-->
+    </div>
 </template>
 
 <script>
